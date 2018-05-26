@@ -168,6 +168,7 @@ bindsym $mod+Shift+h exec "/home/samael/.scripts/suspend_menu"
 bindsym $mod+Shift+x exec --no-startup-id ~/.config/i3/lock.sh
 # in case of layout change event - send signal to i3blocks
 #bindsym ISO_Next_Group exec pkill -RTMIN+1 i3blocks
+#bindsym Alt+ISO_Next_Group exec pkill -RTMIN+1 i3blocks
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 15 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 15 # decrease screen brightness
@@ -187,11 +188,15 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 bindsym $mod+d exec rofi -show run -font "System San Francisco Display 18"
 #
 # Console Tools
-bindsym XF86Calculator  exec --no-startup-id $term -e bc -q
-bindsym $mod+c          exec --no-startup-id $term -e bc -q
 bindsym $mod+i          exec --no-startup-id $term -e htop
 bindsym $mod+m          exec $term -e ranger
 bindsym $mod+Shift+m    exec $term -e sudo ranger /
+# calc
+for_window [title="bc"] floating enable
+for_window [title="bc"] resize set 600 400
+for_window [title="bc"] border pixel 5
+bindsym XF86Calculator  exec --no-startup-id $term -e bc -q
+bindsym $mod+c          exec --no-startup-id $term -e bc -q
 # For screenshots and recording
 bindsym Print           exec --no-startup-id scrot -e 'mv $f ~/Pictures/screenshots/'
 bindsym Shift+Print     exec --no-startup-id scrot -u -e 'mv $f ~/Pictures/screenshots/'
