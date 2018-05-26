@@ -67,6 +67,7 @@ iproute2
 iputils
 iw
 jfsutils
+jq
 less
 lhasa
 libreoffice-fresh
