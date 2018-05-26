@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+LNG=$(xkblayout-state print %s | awk '{print toupper($0)}')
+case $LNG in
+  "UA")
+    FG=yellow
+    BG=blue
+    ;;
+  "RU")
+    FG=darkblue
+    BG=red
+    ;;
+  *)
+    FG=\#f3f4f5
+    BG=black
+    ;;
+esac
+echo -e "<span foreground='$FG' background='$BG'>$LNG</span>\n"

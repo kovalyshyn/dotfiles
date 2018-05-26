@@ -1,0 +1,42 @@
+[core]
+	editor = vim
+	excludesfile = /Users/samael/.gitignore
+	mergeoptions = --no-edit
+
+[github]
+	user = kovalyshyn
+
+[alias]
+	ci = commit -v
+
+[push]
+	default = simple
+
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+
+[color "branch"]
+	current = yellow reverse
+	remote = green bold
+	local = blue bold
+
+[color "diff"]
+	meta = blue bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[user]
+	name = Vitaly Kovalyshyn
+	email = v.kovalyshyn@webitel.com
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/samael/.stCommitMsg
