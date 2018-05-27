@@ -14,7 +14,7 @@ filename="$HOME/screencast$n.mkv"
 # For Pulseaudio with ALSA:
 record_pulse() { \
 ffmpeg \
--f alsa -i default \
+-f pulse -i default \
 -c:a flac \
 $filename ;}
 

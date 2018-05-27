@@ -197,6 +197,11 @@ for_window [title="dropdowncalc"] resize set 600 400
 for_window [title="dropdowncalc"] border pixel 5
 bindsym XF86Calculator  exec --no-startup-id -n math -f mono:pixelsize=24 -e dropdowncalc
 bindsym $mod+c          exec --no-startup-id $term -n math -f mono:pixelsize=24 -e dropdowncalc
+# audio
+for_window [title="ncpamixer"] floating enable
+for_window [title="ncpamixer"] resize set 600 400
+for_window [title="ncpamixer"] border pixel 5
+bindsym $mod+p          exec --no-startup-id $term -n ncpamixer -f mono:pixelsize=24 -e ncpamixer
 # For screenshots and recording
 bindsym Print           exec --no-startup-id scrot -e 'mv $f ~/Pictures/screenshots/'
 bindsym Shift+Print     exec --no-startup-id scrot -u -e 'mv $f ~/Pictures/screenshots/'
