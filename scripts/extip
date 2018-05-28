@@ -6,5 +6,5 @@ extip=$(dig +short myip.opendns.com @resolver1.opendns.com)
 if $extip ; then
     echo -e "<span foreground='red'></span>\n"
 else
-    echo -e "<span foreground='green'>$extip</span>  \n"
+    echo -e "<span foreground='green'>$extip</span> \n"
 fi

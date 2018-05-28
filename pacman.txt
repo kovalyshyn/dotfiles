@@ -100,6 +100,7 @@ ngrep
 ntfs-3g
 odt2txt
 openssh
+otf-font-awesome-4
 p7zip
 package-query
 pacman
@@ -149,6 +150,7 @@ transmission-cli
 tree
 ttf-dejavu
 ttf-font-awesome
+ttf-font-awesome-4
 ttf-liberation
 ttf-ms-fonts
 ttf-roboto
