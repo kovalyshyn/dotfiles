@@ -91,8 +91,8 @@ bindsym $mod+space focus mode_toggle
 
 # Workspaces
 set $workspace1 "1: "
-set $workspace2 "2: "
-set $workspace3 "3: "
+set $workspace2 "2: "
+set $workspace3 "3: "
 set $workspace4 "4: "
 set $workspace5 "5: "
 set $workspace6 "6: "
@@ -151,7 +151,7 @@ bar {
 
 #key-bindings
 # reload the configuration file
-bindsym $mod+Shift+c reload
+# bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
@@ -214,17 +214,15 @@ bindsym $mod+Shift+d    gaps inner current set 0; gaps outer current set 0
 #exec --no-startup-id ~/.scripts/i3mpdupdate
 
 #Assign applications
-bindsym XF86HomePage    exec --no-startup-id qutebrowser; workspace $workspace2
-bindsym $mod+Shift+w    exec --no-startup-id qutebrowser; workspace $workspace2
-assign [class="qutebrowser"] $workspace2
+bindsym $mod+Shift+t    exec --no-startup-id telegram-desktop; workspace $workspace2
+assign [class="TelegramDesktop"] $workspace2
 
-bindsym $mod+Shift+t    exec --no-startup-id telegram-desktop; workspace $workspace3
-assign [class="TelegramDesktop"] $workspace3
-
-bindsym $mod+Shift+p    exec mypaint; workspace $workspace7
-for_window [class="MyPaint"] move workspace $workspace7
-workspace $workspace7 gaps inner 0
-workspace $workspace7 gaps outer 0
+bindsym XF86HomePage    exec --no-startup-id qutebrowser
+bindsym $mod+Shift+b    exec --no-startup-id qutebrowser
+bindsym $mod+Shift+c    exec --no-startup-id google-chrome-stable; workspace $workspace3
+assign [class="google-chrome"] $workspace3
+workspace $workspace3 gaps inner 0
+workspace $workspace3 gaps outer 0
 
 bindsym $mod+Shift+g    exec --no-startup-id gimp; workspace $workspace8
 for_window [title="GIMP Startup"] move workspace $workspace8

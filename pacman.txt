@@ -45,6 +45,7 @@ git-lfs
 glibc
 gnome-icon-theme
 gnome-icon-theme-symbolic
+google-chrome
 gptfdisk
 grep
 groff
@@ -89,7 +90,6 @@ mpc
 mpd
 mpv
 mupdf
-mypaint
 nano
 ncmpcpp
 ncpamixer
