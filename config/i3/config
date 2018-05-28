@@ -181,6 +181,7 @@ bindsym $mod+d exec rofi -show run -font "System San Francisco Display 18"
 # Console Tools
 bindsym $mod+i          exec --no-startup-id $term -e htop
 bindsym $mod+m          exec $term -e ranger
+bindsym $mod+w          exec $term -e sudo wifi-menu
 # calc
 for_window [title="dropdowncalc"] floating enable
 for_window [title="dropdowncalc"] resize set 600 400
@@ -192,11 +193,6 @@ for_window [title="ncpamixer"] floating enable
 for_window [title="ncpamixer"] resize set 600 400
 for_window [title="ncpamixer"] border pixel 5
 bindsym $mod+p          exec --no-startup-id $term -n ncpamixer -f mono:pixelsize=24 -e ncpamixer
-# wifi-menu
-#for_window [title="wifi-menu"] floating enable
-#for_window [title="wifi-menu"] resize set 600 400
-#for_window [title="wifi-menu"] border pixel 5
-bindsym $mod+w          exec $term -e sudo wifi-menu
 # For screenshots and recording
 bindsym Print           exec --no-startup-id scrot -e 'mv $f ~/Pictures/screenshots/'
 bindsym Shift+Print     exec --no-startup-id scrot -u -e 'mv $f ~/Pictures/screenshots/'
