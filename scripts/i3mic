@@ -7,6 +7,6 @@ case $BLOCK_BUTTON in
     5) pamixer --default-source -d 5 ;;
 esac
 
-printpastatus() { [[ $(pamixer --default-source --get-mute) = "true" ]] && echo -n  && exit
+printpastatus() { [[ $(pamixer --default-source --get-mute) = "true" ]] && echo -e "<span foreground='red'></span>" && exit
 echo  $(pamixer --default-source  --get-volume)% ;}
 printpastatus
