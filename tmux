@@ -20,7 +20,7 @@ set -g @plugin 'tmux-plugins/tmux-battery'
 set -g default-terminal "xterm-256color"
 
 # set shell
-set -g default-shell /usr/local/bin/zsh
+#set -g default-shell /usr/local/bin/zsh
 
 # default statusbar colors
 set-option -g status-bg colour235

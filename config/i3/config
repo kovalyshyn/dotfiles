@@ -2,9 +2,9 @@
 #
 # #---Basic Definitions---# #
 #Needed for i3-gaps
-for_window [class="^.*"] border pixel 2
-gaps inner 10
-gaps outer 10
+for_window [class="^.*"] border pixel 3
+gaps inner 15
+gaps outer 15
 
 set $mod Mod4
 
@@ -19,7 +19,7 @@ floating_modifier $mod
 #Music player daemon (mpd):
 #exec --no-startup-id mpd
 #Setting the background:
-exec_always --no-startup-id feh --bg-scale /home/samael/.bg.jpg
+exec_always --no-startup-id feh --bg-scale ~/.bg.jpg
 #Composite manager:
 exec --no-startup-id compton --xrender-sync-fence
 #buffer manager
@@ -142,7 +142,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 #
 bar {
-    status_command i3blocks -c /home/samael/.i3blocks.conf
+    status_command i3blocks -c ~/.i3blocks.conf
     position top
     mode dock
     modifier None
@@ -190,18 +190,22 @@ bindsym XF86Calculator  exec --no-startup-id $term -n math -f mono:pixelsize=24 
 bindsym $mod+c          exec --no-startup-id $term -n math -f mono:pixelsize=24 -e dropdowncalc
 # audio
 for_window [title="ncpamixer"] floating enable
-for_window [title="ncpamixer"] resize set 600 400
+for_window [title="ncpamixer"] resize set 600 500
 for_window [title="ncpamixer"] border pixel 5
 bindsym $mod+p          exec --no-startup-id $term -n ncpamixer -f mono:pixelsize=24 -e ncpamixer
 # For screenshots and recording
 bindsym Print           exec --no-startup-id scrot -e 'mv $f ~/Pictures/screenshots/'
 bindsym Shift+Print     exec --no-startup-id scrot -u -e 'mv $f ~/Pictures/screenshots/'
-bindsym --release $mod+Shift+Print exec "/home/samael/.scripts/scregcp -s /home/samael/Pictures/screenshots/"
+bindsym --release $mod+Shift+Print exec "~/.scripts/scregcp -s ~/Pictures/screenshots/"
 bindsym $mod+Scroll_Lock    exec --no-startup-id "killall screenkey || screenkey"
 bindsym $mod+Print      exec --no-startup-id dmenurecord
 bindsym $mod+Delete     exec $stoprec & notify-send "The recording has been stopped"
 #bindsym XF86Launch1     exec $stoprec & xset dpms force off
-
+#
+for_window [class="Webitel"] floating enable
+for_window [class="Webitel"] resize set 380 640
+bindsym $mod+Shift+p    exec "/opt/webitel-phone/wp"
+#
 ##
 bindsym $mod+Tab        workspace prev
 bindsym $mod+a          gaps inner current plus 5

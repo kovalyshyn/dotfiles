@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rclone copy ~/Documents dropbox:Documents
-rclone copy ~/.calcurse dropbox:Apps/calcurse
+rclone copy ~/Documents dropbox:Documents -v
+rclone copy ~/.calcurse dropbox:Apps/calcurse -v
