@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#echo -e "<span foreground='black' background='#01A252' font-style='italic'>txt</span>\n"
 
 extip=$(dig +short myip.opendns.com @resolver1.opendns.com)
 
@@ -6,9 +7,8 @@ case $BLOCK_BUTTON in
     1)  notify-send $extip;;
 esac
 
-#echo -e "<span foreground='black' background='#01A252' font-style='italic'>$extip </span>\n"
 if $extip ; then
-    echo -e "<span foreground='red'></span>\n"
+   echo -e "<span foreground='red'></span>\n"
 else
     echo -e "<span foreground='green'></span>\n"
 fi

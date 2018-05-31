@@ -204,7 +204,7 @@ bindsym $mod+Delete     exec $stoprec & notify-send "The recording has been stop
 #
 for_window [class="Webitel"] floating enable
 for_window [class="Webitel"] resize set 380 640
-bindsym $mod+Shift+p    exec "/opt/webitel-phone/wp"
+bindsym $mod+Shift+p    exec '/opt/webitel-phone/Webitel Phone'
 #
 ##
 bindsym $mod+Tab        workspace prev
@@ -220,6 +220,7 @@ bindsym $mod+Shift+d    gaps inner current set 0; gaps outer current set 0
 #Assign applications
 bindsym $mod+Shift+t    exec --no-startup-id telegram-desktop; workspace $workspace2
 assign [class="TelegramDesktop"] $workspace2
+assign [class="Skype"] $workspace2
 
 bindsym XF86HomePage    exec --no-startup-id qutebrowser
 bindsym $mod+Shift+b    exec --no-startup-id qutebrowser
