@@ -172,9 +172,9 @@ bindsym XF86AudioPause exec mpc pause
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc prev
 # Volume control
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pamixer -t && pkill -RTMIN+10 i3blocks
 #
 bindsym $mod+d exec rofi -show run -font "System San Francisco Display 18"
 #
@@ -204,7 +204,7 @@ bindsym $mod+Delete     exec $stoprec & notify-send "The recording has been stop
 #
 for_window [class="Webitel"] floating enable
 for_window [class="Webitel"] resize set 380 640
-bindsym $mod+Shift+p    exec '/opt/webitel-phone/Webitel Phone'
+bindsym $mod+Shift+p    exec /opt/webitel-phone/webitel-phone
 #
 ##
 bindsym $mod+Tab        workspace prev
@@ -226,8 +226,6 @@ bindsym XF86HomePage    exec --no-startup-id qutebrowser
 bindsym $mod+Shift+b    exec --no-startup-id qutebrowser
 bindsym $mod+Shift+c    exec --no-startup-id google-chrome-stable; workspace $workspace3
 assign [class="google-chrome"] $workspace3
-workspace $workspace3 gaps inner 0
-workspace $workspace3 gaps outer 0
 
 bindsym $mod+Shift+g    exec --no-startup-id gimp; workspace $workspace8
 for_window [title="GIMP Startup"] move workspace $workspace8
