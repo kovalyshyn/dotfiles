@@ -179,20 +179,25 @@ bindsym XF86AudioMute exec --no-startup-id pamixer -t && pkill -RTMIN+10 i3block
 bindsym $mod+d exec rofi -show run -font "System San Francisco Display 18"
 #
 # Console Tools
-bindsym $mod+i          exec --no-startup-id $term -e htop
 bindsym $mod+m          exec $term -e ranger
 bindsym $mod+w          exec $term -e sudo wifi-menu
+bindsym $mod+i          exec --no-startup-id $term -e gotop
+for_window [title="gotop"] floating enable
+for_window [title="gotop"] resize set 800 600
+
 # calc
 for_window [title="dropdowncalc"] floating enable
 for_window [title="dropdowncalc"] resize set 600 400
 for_window [title="dropdowncalc"] border pixel 5
 bindsym XF86Calculator  exec --no-startup-id $term -n math -f mono:pixelsize=24 -e dropdowncalc
 bindsym $mod+c          exec --no-startup-id $term -n math -f mono:pixelsize=24 -e dropdowncalc
+
 # audio
 for_window [title="ncpamixer"] floating enable
 for_window [title="ncpamixer"] resize set 600 500
 for_window [title="ncpamixer"] border pixel 5
 bindsym $mod+p          exec --no-startup-id $term -n ncpamixer -f mono:pixelsize=24 -e ncpamixer
+
 # For screenshots and recording
 bindsym Print           exec --no-startup-id scrot -e 'mv $f ~/Pictures/screenshots/'
 bindsym Shift+Print     exec --no-startup-id scrot -u -e 'mv $f ~/Pictures/screenshots/'
