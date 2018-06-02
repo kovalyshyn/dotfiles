@@ -266,6 +266,7 @@ autocmd BufWrite *.coffee :call DeleteTrailingWS()
 " Make notes markdown compatibles:
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost */calcurse-note.* set filetype=markdown
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vimgrep searching and cope displaying
