@@ -1,5 +1,2 @@
 vim/spell
-config/mpd/log
-config/mpd/pid
-config/mpd/state
-ncmpcpp/error.log
+vim/sessions
