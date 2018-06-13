@@ -37,7 +37,7 @@ URxvt.scrollBar:    false
 URxvt.cursorColor:  white
 
 !! Extensions
-URxvt.perl-ext-common:  default,clipboard,matcher,font-size,url-select,keyboard-select
+URxvt.perl-ext-common:  default,clipboard,matcher,searchable-scrollback,font-size,url-select,keyboard-select
 URxvt.colorUL:      #4682B4
 !! url-select
 URxvt.keysym.M-u:   perl:url-select:select_next
@@ -47,6 +47,7 @@ URxvt.url-select.underline: true
 !!URxvt.matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 !! keyboard-select:
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
 !! resize-font
 !! URxvt.resize-font.smaller: C-Down
 !! URxvt.resize-font.bigger: C-Up
