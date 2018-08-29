@@ -100,12 +100,7 @@ autocmd BufWritePre * %s/\s\+$//e
 " Enable syntax highlighting
 syntax enable
 
-colorscheme perun
-set background=dark
-
-" let g:Powerline_symbols = 'fancy'
-" set rtp+=/Users/samael/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
-" set guifont=Ubuntu\ Mono\ derivative\ Powerline
+colorscheme atomified
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -330,9 +325,13 @@ map <leader>q :e ~/buffer<cr>
 map <leader>pp :setlocal paste!<cr>
 
 " Vim session manager
-let g:sessions_dir = '~/.vim/sessions'
-exec 'nnoremap <Leader>ss :mks! ' . g:sessions_dir . '/*.vim<C-D><BS><BS><BS><BS><BS>'
-exec 'nnoremap <Leader>sr :so ' . g:sessions_dir. '/*.vim<C-D><BS><BS><BS><BS><BS>'
+"let g:sessions_dir = '~/.vim/sessions'
+"exec 'nnoremap <Leader>ss :mks! ' . g:sessions_dir . '/*.vim<C-D><BS><BS><BS><BS><BS>'
+"exec 'nnoremap <Leader>sr :so ' . g:sessions_dir. '/*.vim<C-D><BS><BS><BS><BS><BS>'
+
+" Format JSON in vim using Python’s json.tool module
+" ,jt
+map <leader>jt  <Esc>:%!python -m json.tool<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
